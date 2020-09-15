@@ -11,9 +11,11 @@ namespace Object01
         public string nev;
         public int eletkor;
 
-        public void Bemutatkozas()
+        public string Bemutatkozas()
         {
-            Console.WriteLine("{0} vagyok, {1} éves.", nev, eletkor);
+            string valasz = $"{nev} vagyok, {eletkor} éves.";
+            return valasz;
+            //return $"{nev} vagyok, {eletkor} éves.";
         }
     }
 
@@ -26,14 +28,12 @@ namespace Object01
 
             Pisti.nev = "Nagy Pisti";
             Pisti.eletkor = 20;
-            
-            Pisti.eletkor++;
 
             Eva.nev = "Nagy Éva";
             Eva.eletkor = 18;
 
-            Console.WriteLine("{0} vagyok, {1} éves.", Pisti.nev, Pisti.eletkor);
-            Console.WriteLine("{0} vagyok, {1} éves.", Eva.nev, Eva.eletkor);
+            Console.WriteLine(Pisti.Bemutatkozas());
+            Console.WriteLine(Eva.Bemutatkozas());
 
             Console.ReadKey();
         }
